@@ -1,4 +1,4 @@
-import 'package:connecting_api/api_acess/post_replay/replay_questions.dart';
+import 'package:app_client_beta/api_acess/post_replay/replay_questions.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import '../styles/constants.dart';

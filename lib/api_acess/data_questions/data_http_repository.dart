@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:connecting_api/api_acess/post_replay/replay_questions.dart';
-import 'package:connecting_api/api_acess/data_questions/data_model.dart';
-import 'package:connecting_api/api_acess/data_questions/i_data_repository.dart';
+import 'package:app_client_beta/api_acess/post_replay/replay_questions.dart';
+import 'package:app_client_beta/api_acess/data_questions/data_model.dart';
+import 'package:app_client_beta/api_acess/data_questions/i_data_repository.dart';
 import 'package:http/http.dart' as http;
 
 class DataHttpRepository implements IDataRepository {

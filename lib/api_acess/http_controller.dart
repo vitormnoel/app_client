@@ -1,4 +1,4 @@
-import 'package:connecting_api/api_acess/data_questions/i_data_repository.dart';
+import 'package:app_client_beta/api_acess/data_questions/i_data_repository.dart';
 import 'package:get/get.dart';
 
 class HttpController extends GetxController with StateMixin {

@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors, duplicate_ignore
-import 'package:connecting_api/final/final_page.dart';
-import 'package:connecting_api/home/home_page.dart';
-import 'package:connecting_api/api_acess/http_bindings.dart';
-import 'package:connecting_api/questions/avarage/avarage.dart';
-import 'package:connecting_api/questions/icon_first/icon_first.dart';
-import 'package:connecting_api/questions/icon_second/icon_second.dart';
-import 'package:connecting_api/questions/icon_third/icon_third.dart';
-import 'package:connecting_api/questions/option/option.dart';
+import 'package:app_client_beta/final/final_page.dart';
+import 'package:app_client_beta/home/home_page.dart';
+import 'package:app_client_beta/api_acess/http_bindings.dart';
+import 'package:app_client_beta/questions/avarage/avarage.dart';
+import 'package:app_client_beta/questions/icon_first/icon_first.dart';
+import 'package:app_client_beta/questions/icon_second/icon_second.dart';
+import 'package:app_client_beta/questions/icon_third/icon_third.dart';
+import 'package:app_client_beta/questions/option/option.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';

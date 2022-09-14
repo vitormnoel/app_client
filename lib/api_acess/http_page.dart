@@ -1,5 +1,5 @@
-import 'package:connecting_api/api_acess/http_controller.dart';
-import 'package:connecting_api/api_acess/data_questions/data_model.dart';
+import 'package:app_client_beta/api_acess/http_controller.dart';
+import 'package:app_client_beta/api_acess/data_questions/data_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 

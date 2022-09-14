@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_typing_uninitialized_variables, use_key_in_widget_constructors, must_be_immutable
 
-import 'package:connecting_api/api_acess/http_controller.dart';
-import 'package:connecting_api/api_acess/data_questions/data_model.dart';
-import 'package:connecting_api/styles/questions.dart';
+import 'package:app_client_beta/api_acess/http_controller.dart';
+import 'package:app_client_beta/api_acess/data_questions/data_model.dart';
+import 'package:app_client_beta/styles/questions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../api_acess/post_replay/replay_questions.dart';
