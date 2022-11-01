@@ -2,15 +2,15 @@ import 'package:app_client_beta/styles/constants.dart';
 import 'package:flutter/material.dart';
 
 const numberQuestion = TextStyle(
-  color: red800,
-  fontSize: 32,
-  fontWeight: FontWeight.w700,
+  color: black500,
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
 );
 
 const question = TextStyle(
   color: black700,
-  fontSize: 40,
-  fontWeight: FontWeight.w400,
+  fontSize: 32,
+  fontWeight: FontWeight.bold,
 );
 
 const option = TextStyle(

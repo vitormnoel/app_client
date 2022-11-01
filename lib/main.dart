@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors, duplicate_ignore
+import 'package:app_client_beta/exceptions/error_connection.dart';
 import 'package:app_client_beta/final/final_page.dart';
 import 'package:app_client_beta/home/home_page.dart';
 import 'package:app_client_beta/api_acess/http_bindings.dart';
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/error', page: () => ErroPage()),
             GetPage(name: '/computing', page: () => ComputingQuestions()),
             GetPage(name: '/loading', page: () => LoadingPage()),
+            GetPage(name: '/errorconnection', page: () => ErrorConnection()),
           ],
         ),
       ],

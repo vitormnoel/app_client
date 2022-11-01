@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_print, duplicate_ignore
+import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -150,116 +152,254 @@ class ReplyQuestions {
 // ===========================
 
   postReplyOne() async {
-    await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
-        headers: {
-          'Accept': 'application/json',
-          'Authorization': 'Bearer $token'
-        },
-        body: {
-          'answer[reply]': '$replyQuestionOne',
-          'answer[question]': '$idOne',
-          'answer[session]': '$identifierSession',
-        }).then((response) {
-      print('Response body : ${response.body}');
-    });
+    try {
+      await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
+          headers: {
+            'Accept': 'application/json',
+            'Authorization': 'Bearer $token'
+          },
+          body: {
+            'answer[reply]': '$replyQuestionOne',
+            'answer[question]': '$idOne',
+            'answer[session]': '$identifierSession',
+          }).then((response) {
+        print('Response body : ${response.body}');
+      });
+    } on HttpException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Couldn't find the post ");
+      return false;
+    } on FormatException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Bad response format ");
+      return false;
+    } on TimeoutException {
+      Get.toNamed('/home');
+      print('timeOut');
+      return false;
+    } on Error catch (e, stackStrace) {
+      Get.toNamed('/home');
+      print(':::::::::::::::::::::: error ');
+      return false;
+    }
   }
 
   postReplyTwo() async {
-    await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
-        headers: {
-          'Accept': 'application/json',
-          'Authorization': 'Bearer $token'
-        },
-        body: {
-          'answer[reply]': '$replyQuestionTwo',
-          'answer[question]': '$idTwo',
-          'answer[session]': '$identifierSession',
-        }).then((response) {
-      print('Response body : ${response.body}');
-    });
+    try {
+      await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
+          headers: {
+            'Accept': 'application/json',
+            'Authorization': 'Bearer $token'
+          },
+          body: {
+            'answer[reply]': '$replyQuestionTwo',
+            'answer[question]': '$idTwo',
+            'answer[session]': '$identifierSession',
+          }).then((response) {
+        print('Response body : ${response.body}');
+      });
+    } on HttpException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Couldn't find the post ");
+      return false;
+    } on FormatException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Bad response format ");
+      return false;
+    } on TimeoutException {
+      Get.toNamed('/home');
+      print('timeOut');
+      return false;
+    } on Error catch (e, stackStrace) {
+      Get.toNamed('/home');
+      print(':::::::::::::::::::::: error ');
+      return false;
+    }
   }
 
   postReplyThree() async {
-    await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
-        headers: {
-          'Accept': 'application/json',
-          'Authorization': 'Bearer $token'
-        },
-        body: {
-          'answer[reply]': '$replyQuestionThree',
-          'answer[question]': '$idThree',
-          'answer[session]': '$identifierSession',
-        }).then((response) {
-      print('Response body : ${response.body}');
-    });
+    try {
+      await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
+          headers: {
+            'Accept': 'application/json',
+            'Authorization': 'Bearer $token'
+          },
+          body: {
+            'answer[reply]': '$replyQuestionThree',
+            'answer[question]': '$idThree',
+            'answer[session]': '$identifierSession',
+          }).then((response) {
+        print('Response body : ${response.body}');
+      });
+    } on HttpException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Couldn't find the post ");
+      return false;
+    } on FormatException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Bad response format ");
+      return false;
+    } on TimeoutException {
+      Get.toNamed('/home');
+      print('timeOut');
+      return false;
+    } on Error catch (e, stackStrace) {
+      Get.toNamed('/home');
+      print(':::::::::::::::::::::: error ');
+      return false;
+    }
   }
 
   postReplyFour() async {
-    await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
-        headers: {
-          'Accept': 'application/json',
-          'Authorization': 'Bearer $token'
-        },
-        body: {
-          'answer[reply]': '$replyQuestionFour',
-          'answer[question]': '$idFour',
-          'answer[session]': '$identifierSession',
-        }).then((response) {
-      print('Response body : ${response.body}');
-    });
+    try {
+      await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
+          headers: {
+            'Accept': 'application/json',
+            'Authorization': 'Bearer $token'
+          },
+          body: {
+            'answer[reply]': '$replyQuestionFour',
+            'answer[question]': '$idFour',
+            'answer[session]': '$identifierSession',
+          }).then((response) {
+        print('Response body : ${response.body}');
+      });
+    } on HttpException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Couldn't find the post ");
+      return false;
+    } on FormatException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Bad response format ");
+      return false;
+    } on TimeoutException {
+      Get.toNamed('/home');
+      print('timeOut');
+      return false;
+    } on Error catch (e, stackStrace) {
+      Get.toNamed('/home');
+      print(':::::::::::::::::::::: error ');
+      return false;
+    }
   }
 
   postReplyFive() async {
-    await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
-        headers: {
-          'Accept': 'application/json',
-          'Authorization': 'Bearer $token'
-        },
-        body: {
-          'answer[reply]': '$replyQuestionFive',
-          'answer[question]': '$idFive',
-          'answer[session]': '$identifierSession',
-        }).then((response) {
-      print('Response body : ${response.body}');
-    });
+    try {
+      await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
+          headers: {
+            'Accept': 'application/json',
+            'Authorization': 'Bearer $token'
+          },
+          body: {
+            'answer[reply]': '$replyQuestionFive',
+            'answer[question]': '$idFive',
+            'answer[session]': '$identifierSession',
+          }).then((response) {
+        print('Response body : ${response.body}');
+      });
+    } on HttpException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Couldn't find the post ");
+      return false;
+    } on FormatException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Bad response format ");
+      return false;
+    } on TimeoutException {
+      Get.toNamed('/home');
+      print('timeOut');
+      return false;
+    } on Error catch (e, stackStrace) {
+      Get.toNamed('/home');
+      print(':::::::::::::::::::::: error ');
+      return false;
+    }
   }
 
   postReplySix() async {
-    await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
-        headers: {
-          'Accept': 'application/json',
-          'Authorization': 'Bearer $token'
-        },
-        body: {
-          'answer[reply]': '$replyQuestionSix',
-          'answer[question]': '$idSix',
-          'answer[session]': '$identifierSession',
-        }).then((response) {
-      print('Response body : ${response.body}');
-    });
+    try {
+      await http.post(Uri.parse('http://192.168.0.104:8080/api/answer/reply'),
+          headers: {
+            'Accept': 'application/json',
+            'Authorization': 'Bearer $token'
+          },
+          body: {
+            'answer[reply]': '$replyQuestionSix',
+            'answer[question]': '$idSix',
+            'answer[session]': '$identifierSession',
+          }).then((response) {
+        print('Response body : ${response.body}');
+      });
+    } on HttpException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Couldn't find the post ");
+      return false;
+    } on FormatException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Bad response format ");
+      return false;
+    } on TimeoutException {
+      Get.toNamed('/home');
+      print('timeOut');
+      return false;
+    } on Error catch (e, stackStrace) {
+      Get.toNamed('/home');
+      print(':::::::::::::::::::::: error ');
+      return false;
+    }
   }
 
   Future finishSession() async {
-    var url = Uri.parse(
-        'http://192.168.0.104:8080/api/session/finish/$identifierSession');
-    // ignore: unused_local_variable
-    var response = await http.put(url, headers: {
-      'Accept': 'application/json',
-      'Authorization': 'Bearer $token',
-    }).then((response) {
-      debugPrint('session getter in::: $identifierSession');
-      debugPrint('Response body : ${response.body}');
-    });
-    Get.toNamed('/final');
+    try {
+      var url = Uri.parse(
+          'http://192.168.0.104:8080/api/session/finish/$identifierSession');
+      // ignore: unused_local_variable
+      var response = await http.put(url, headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer $token',
+      }).then((response) {
+        debugPrint('session getter in::: $identifierSession');
+        debugPrint('Response body : ${response.body}');
+      });
+      Get.toNamed('/home');
+    } on HttpException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Couldn't find the post ");
+      return false;
+    } on FormatException {
+      // ignore: avoid_print
+      Get.toNamed('/home');
+      print("Bad response format ");
+      return false;
+    } on TimeoutException {
+      Get.toNamed('/home');
+      print('timeOut');
+      return false;
+    } on Error catch (e, stackStrace) {
+      Get.toNamed('/home');
+      print(':::::::::::::::::::::: error ');
+      return false;
+    }
   }
 
   awaitIdSession() async {
     while (identifierSession == '') {
       Get.toNamed('/loading');
-
       return false;
     }
-
     return true;
   }
 
@@ -280,13 +420,11 @@ class ReplyQuestions {
     f;
     debugPrint('session getter out::: $identifierSession');
     finishing();
-
     return true;
   }
 }
 
 ReplyQuestions objReplyQuestions = ReplyQuestions();
-
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Future<bool> createSessionApi(String token, String idFlow) async {
   objReplyQuestions.identifierSession = '';

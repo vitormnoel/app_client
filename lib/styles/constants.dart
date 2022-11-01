@@ -13,6 +13,7 @@ const yellow50 = Color(0xFFEDEAE4);
 const yellow200 = Color(0xFFFFE3A2);
 const yellow300 = Color(0xFFFEC714);
 const yellow500 = Color(0xFFCC9B43);
+const yellow700 = Color(0xFFD8A149);
 
 const red50 = Color(0xFFFFFAFA);
 const red300 = Color(0xFFE21F26);
@@ -21,8 +22,16 @@ const red800 = Color(0xFF6A2123);
 
 const green300 = Color(0xFF02A976);
 const green500 = Color(0xFF369548);
+const green700 = Color(0xFF3B625A);
 
+const black500 = Color(0xFF3D3730);
 const black700 = Color(0xFF1D1D1D);
 
 //styles color
-const background = yellow50;
+const background = white;
+
+const mensageError = TextStyle(
+  color: white,
+  fontSize: 30,
+  fontWeight: FontWeight.bold,
+);

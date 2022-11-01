@@ -7,13 +7,13 @@ import 'text_login.dart';
 class FormLogin extends StatelessWidget {
   const FormLogin({
     Key? key,
-    required email,
+    required identifier,
     required password,
-  })  : _email = email,
+  })  : _identifier = identifier,
         _password = password,
         super(key: key);
 
-  final TextEditingController _email;
+  final TextEditingController _identifier;
   final TextEditingController _password;
 
   @override
@@ -32,7 +32,7 @@ class FormLogin extends StatelessWidget {
             textInput: 'Digite o ID do departamento',
             textKeyboard: TextInputType.number,
             obscure: false,
-            controller: _email,
+            controller: _identifier,
             padding: 24,
           ),
           const TextLogin(

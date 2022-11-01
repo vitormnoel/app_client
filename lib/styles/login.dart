@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 final buttonEnter = ElevatedButton.styleFrom(
-  backgroundColor: red500,
+  backgroundColor: yellow700,
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(4.0),
   ),
 );
 
 const titleLogin = TextStyle(
-  color: red500,
+  color: yellow700,
   fontSize: 36,
   fontWeight: FontWeight.w600,
 );

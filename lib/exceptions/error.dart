@@ -21,11 +21,11 @@ class _ErroPageState extends State<ErroPage> {
       backgroundColor: background,
       body: Center(
         child: SizedBox(
-          width: MediaQuery.of(context).size.width * .5,
+          width: MediaQuery.of(context).size.width * .4,
           height: MediaQuery.of(context).size.height * 1,
           child: Lottie.asset(
             'assets/exceptions/erro.json',
-            width: MediaQuery.of(context).size.width * .5,
+            width: MediaQuery.of(context).size.width * .4,
             height: MediaQuery.of(context).size.height * 1,
           ),
         ),

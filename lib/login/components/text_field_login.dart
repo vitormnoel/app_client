@@ -25,10 +25,15 @@ class TextFieldLogin extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(bottom: padding),
       child: TextFormField(
-        // validator: validator(),
         controller: controller,
         obscureText: obscure,
         keyboardType: textKeyboard,
+        validator: (controller) {
+          if (controller == null || controller.isEmpty) {
+            return 'Digite o ID do departamento e senha';
+          }
+          return null;
+        },
         decoration: InputDecoration(
             hintText: textInput,
             border: const OutlineInputBorder(

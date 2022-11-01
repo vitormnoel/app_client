@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+import 'package:app_client_beta/styles/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -21,6 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: background,
       body: SingleChildScrollView(
         child: Form(
           key: _formkey,
@@ -42,6 +45,10 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 24),
+                      child: Image.asset('assets/logo/logoback.png'),
+                    ),
                     const TextLogin(
                       textLogin: 'Bem vindo(a)',
                       textSt: subTitleLogin,
@@ -53,7 +60,8 @@ class _LoginPageState extends State<LoginPage> {
                       padding: 8,
                     ),
                     SizedBox(
-                      child: FormLogin(email: _identifier, password: _password),
+                      child: FormLogin(
+                          identifier: _identifier, password: _password),
                     ),
                     Row(
                       children: [
@@ -67,14 +75,15 @@ class _LoginPageState extends State<LoginPage> {
                                 FocusScopeNode correntFocus =
                                     FocusScope.of(context);
                                 if (_formkey.currentState!.validate()) {
+                                  Get.toNamed('/loading');
                                   bool ok = await loginRequest(
                                       _identifier.text, _password.text);
 
                                   if (ok) {
                                     Get.toNamed('/home');
                                   } else {
-                                    _identifier.clear();
-                                    _password.clear();
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(snackBar);
                                   }
                                 }
                               },
@@ -94,3 +103,13 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+//mensage identifier error
+const snackBar = SnackBar(
+  content: Text(
+    'Ops. Verifique a conexão com servidor ou Credenciais.',
+    style: mensageError,
+    textAlign: TextAlign.center,
+  ),
+  backgroundColor: Colors.red,
+);

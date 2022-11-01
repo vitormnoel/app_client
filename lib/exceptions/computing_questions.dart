@@ -1,7 +1,5 @@
 // ignore_for_file: use_key_in_widget_constructors
-
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -38,7 +36,7 @@ class _ComputingQuestionsState extends State<ComputingQuestions> {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 const Text(
-                  "Agurade um momento, estamos salvando suas respostas...",
+                  "Obrigado por participar, vamos avaliar todas suas respostas...",
                   style: TextStyle(
                     color: red800,
                     fontSize: 40,
