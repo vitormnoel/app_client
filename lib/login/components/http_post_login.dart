@@ -10,7 +10,7 @@ import '../login_page.dart';
 Future<bool> loginRequest(String identifier, String password) async {
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   try {
-    var url = Uri.parse('http://192.168.0.104:8080/api/security/login');
+    var url = Uri.parse('http://10.0.1.11:8080/admin/api/security/login');
     var response = await http.post(
       url,
       body: {

@@ -31,6 +31,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Nasr App",
       getPages: [
         // ignore: prefer_const_constructors
         GetPage(
